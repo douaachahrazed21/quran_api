@@ -1,0 +1,8 @@
+# Dépendances pour Render
+torch
+torchaudio
+transformers
+requests
+librosa
+flask
+flask-cors

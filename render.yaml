@@ -1,0 +1,8 @@
+# Fichier de configuration pour Render
+services:
+  - type: web
+    name: quran-api
+    env: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python app.py"
