@@ -8,4 +8,8 @@ services:
     startCommand: "python app.py"
     envVars:
       - key: TRANSFORMERS_CACHE
+<<<<<<< HEAD
         value: /tmp/cache
+=======
+        value: /tmp/cache
+>>>>>>> 23f01e7f82e252c6c06cf25fad0065f2fdb8273e
