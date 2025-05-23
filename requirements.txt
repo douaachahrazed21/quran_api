@@ -7,3 +7,4 @@ librosa
 flask
 flask-cors
 gunicorn
+whisper
