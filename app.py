@@ -8,8 +8,8 @@ import tempfile
 app = Flask(__name__)
 CORS(app)
 
-@app.route("/transcrire", methods=["POST"])
-def transcrire():
+@app.route("/transcribe", methods=["POST"])
+def transcribe():
     if 'audio' not in request.files:
         return jsonify({"error": "Aucun fichier audio fourni."}), 400
 
