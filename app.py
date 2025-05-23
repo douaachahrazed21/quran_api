@@ -31,6 +31,7 @@ def transcrire():
     os.remove(audio_path)
     return jsonify(result)
 
+
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 5000))  # Render fournit automatiquement le bon port
+    port = int(os.environ.get("PORT", 10000))
     app.run(host="0.0.0.0", port=port)

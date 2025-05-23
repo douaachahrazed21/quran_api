@@ -34,12 +34,12 @@ def appliquer_regles_personnalisees(texte):
     texte_corrige = re.sub(r'عَيْنْ سِينْ قَافْ', 'عٓسٓقٓ', texte_corrige)
     return texte_corrige
 
-def surligner_erreurs(a, b):
+def surligner_erreurs(reference, transcription):
     output = ""
-    matcher = SequenceMatcher(None, a, b)
+    matcher = SequenceMatcher(None, reference, transcription)
     for tag, i1, i2, j1, j2 in matcher.get_opcodes():
         if tag == "equal":
-            output += b[j1:j2]
+            output += reference[i1:i2]
         else:
-            output += f"<span style='background-color:red; color:white;'>{b[j1:j2]}</span>"
+            output += f"<span style='background-color:red; color:white;'>{reference[i1:i2]}</span>"
     return output
